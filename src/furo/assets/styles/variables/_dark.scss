@@ -76,7 +76,7 @@
 
     @each $name, $values in $admonitions {
       --color-admonition-title--#{$name}: #{nth($values, 1)};
-      --color-admonition-title-background--#{$name}: #{rgba(nth($values, 1), 0.1)};
+      --color-admonition-title-background--#{$name}: transparentize(nth($values, 1), 0.1);
     }
 
     //////////////////////////////////////////////////////////////////////////////

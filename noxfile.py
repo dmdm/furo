@@ -132,12 +132,12 @@ def release(session):
     session.run("release-helper", "git-check-remote", "origin", *allowed_upstreams)
 
     # Prepare release commit
-    session.run("release-helper", "version-bump", version_file, release_version)
-    session.run("git", "add", version_file, external=True)
+    # session.run("release-helper", "version-bump", version_file, release_version)
+    # session.run("git", "add", version_file, external=True)
 
-    session.run(
-        "git", "commit", "-m", f"Prepare release: {release_version}", external=True
-    )
+    # session.run(
+    #     "git", "commit", "-m", f"Prepare release: {release_version}", external=True
+    # )
 
     # Build the package
     session.run("gulp", "build", external=True)
@@ -145,12 +145,12 @@ def release(session):
     session.run("twine", "check", *glob.glob("dist/*"))
 
     # Tag the commit
-    session.run(
-        # fmt: off
-        "git", "tag", release_version, "-m", f"Release {release_version}", "-s",
-        external=True,
-        # fmt: on
-    )
+    # session.run(
+    #     # fmt: off
+    #     "git", "tag", release_version, "-m", f"Release {release_version}", "-s",
+    #     external=True,
+    #     # fmt: on
+    # )
 
     # Prepare back-to-development commit
     session.run("release-helper", "version-bump", version_file, next_version)
