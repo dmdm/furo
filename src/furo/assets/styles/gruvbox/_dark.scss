@@ -1,0 +1,29 @@
+$gb-dark-bg0: $gb-dark0;
+@if $gruvbox-contrast-dark == 'soft' {
+  $gb-dark-bg0: $gb-dark0-soft;
+} @else if $gruvbox-contrast-dark == 'hard' {
+  $gb-dark-bg0: $gb-dark0-hard;
+}
+
+$gb-dark-bg1: $gb-dark1;
+$gb-dark-bg2: $gb-dark2;
+$gb-dark-bg3: $gb-dark3;
+$gb-dark-bg4: $gb-dark4;
+
+$gb-dark-gray: $gb-gray-245;
+
+$gb-dark-fg0: $gb-light0;
+$gb-dark-fg1: $gb-light1;
+$gb-dark-fg2: $gb-light2;
+$gb-dark-fg3: $gb-light3;
+$gb-dark-fg4: $gb-light4;
+
+$gb-dark-fg4-256: $gb-light4-256;
+
+$gb-dark-red: $gb-bright-red;
+$gb-dark-green: $gb-bright-green;
+$gb-dark-yellow: $gb-bright-yellow;
+$gb-dark-blue: $gb-bright-blue;
+$gb-dark-purple: $gb-bright-purple;
+$gb-dark-aqua: $gb-bright-aqua;
+$gb-dark-orange: $gb-bright-orange;

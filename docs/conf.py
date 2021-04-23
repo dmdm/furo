@@ -69,3 +69,6 @@ html_theme = "furo"
 html_title = "Furo"
 
 html_static_path = ["_static"]
+
+pygments_style = "gruvbox-light"
+pygments_dark_style = "gruvbox-dark"

@@ -1,0 +1,30 @@
+$gb-light-bg0: $gb-light0;
+@if $gruvbox-contrast-light == 'soft' {
+  $gb-light-bg0: $gb-light0-soft;
+}
+@else if $gruvbox-contrast-light == 'hard' {
+  $gb-light-bg0: $gb-light0-hard;
+}
+
+$gb-light-bg1: $gb-light1;
+$gb-light-bg2: $gb-light2;
+$gb-light-bg3: $gb-light3;
+$gb-light-bg4: $gb-light4;
+
+$gb-light-gray: $gb-gray-244;
+
+$gb-light-fg0: $gb-dark0;
+$gb-light-fg1: $gb-dark1;
+$gb-light-fg2: $gb-dark2;
+$gb-light-fg3: $gb-dark3;
+$gb-light-fg4: $gb-dark4;
+
+$gb-light-fg4-256: $gb-dark4-256;
+
+$gb-light-red: $gb-faded-red;
+$gb-light-green: $gb-faded-green;
+$gb-light-yellow: $gb-faded-yellow;
+$gb-light-blue: $gb-faded-blue;
+$gb-light-purple: $gb-faded-purple;
+$gb-light-aqua: $gb-faded-aqua;
+$gb-light-orange: $gb-faded-orange;

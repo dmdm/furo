@@ -1,0 +1,85 @@
+// This file defines all the knobs that can be tweaked by end users.
+
+// Overall Layout Variables
+//
+// These are set here, since CSS variables can't be used in media queries,
+// which is where these would be used.
+$content-padding: 3em;
+$content-padding--small: 1em;
+$content-width: 46em;
+$sidebar-width: 15em;
+$full-width: $content-width + 2 * ($content-padding + $sidebar-width);
+
+:root {
+  //////////////////////////////////////////////////////////////////////////////
+  // Fonts
+  //////////////////////////////////////////////////////////////////////////////
+  // These are adapted from https://systemfontstack.com/
+  --font-stack: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-stack--monospace: "SFMono-Regular", Menlo, Consolas, Monaco,
+    Liberation Mono, Lucida Console, monospace;
+
+  --font-size--normal: 200%;
+  --font-size--small: 87.5%;
+  --font-size--small--2: 81.25%;
+  --font-size--small--3: 75%;
+  --font-size--small--4: 62.5%;
+
+  // Sidebar
+  --sidebar-caption-font-size: var(--font-size--small--2);
+  --sidebar-item-font-size: var(--font-size--small);
+  --sidebar-search-input-font-size: var(--font-size--small);
+
+  // Table of Contents
+  --toc-font-size: var(--font-size--small--3);
+  --toc-font-size--mobile: var(--font-size--normal);
+  --toc-title-font-size: var(--font-size--small--4);
+
+  // Admonitions
+  --admonition-font-size: 0.8125rem;
+  --admonition-title-font-size: 0.8125rem;
+
+  // Code
+  --code-font-size: var(--font-size--small--2);
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Spacing
+  //////////////////////////////////////////////////////////////////////////////
+  --header-height: calc(
+    var(--sidebar-item-line-height) + 4 * #{var(--sidebar-item-spacing-vertical)}
+  );
+
+  // Sidebar
+  --sidebar-tree-space-above: 1.5rem;
+  --sidebar-caption-space-above: 1rem;
+
+  --sidebar-item-line-height: 1rem;
+  --sidebar-item-spacing-vertical: 0.5rem;
+  --sidebar-item-spacing-horizontal: 1rem;
+  --sidebar-item-height: calc(
+    var(--sidebar-item-line-height) + 2 *#{var(--sidebar-item-spacing-vertical)}
+  );
+
+  --sidebar-expander-width: var(--sidebar-item-height); // be square
+
+  --sidebar-search-space-above: 0.5rem;
+  --sidebar-search-input-spacing-vertical: 0.5rem;
+  --sidebar-search-input-spacing-horizontal: 0.5rem;
+  --sidebar-search-input-height: 1rem;
+  --sidebar-search-icon-size: var(--sidebar-search-input-height);
+
+  // Table of Contents
+  --toc-title-padding: 0.25rem 0;
+  --toc-spacing-vertical: 1.5rem;
+  --toc-spacing-horizontal: 1.5rem;
+  --toc-item-spacing-vertical: 0.4rem;
+  --toc-item-spacing-horizontal: 1rem;
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Icons
+  //////////////////////////////////////////////////////////////////////////////
+  @each $name, $glyph in $icons {
+    --icon-#{$name}: #{$glyph};
+  }
+}
