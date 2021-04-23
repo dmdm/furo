@@ -103,7 +103,7 @@ def get_release_versions(version_file):
             raise RuntimeError("Could not find current version.")
 
     today = datetime.date.today()
-    release_version = today.strftime(f"%Y.%m.%d.beta{current_number}")
+    release_version = today.strftime(f"%Y.%m.%d.dev{current_number}")
     next_version = today.strftime(f"%Y.%m.%d.dev{current_number+1}")
 
     return release_version, next_version
