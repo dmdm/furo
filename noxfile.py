@@ -127,7 +127,7 @@ def release(session):
     session.run("release-helper", "directory-check-empty", "dist")
 
     session.run("release-helper", "git-check-branch", "gruvbox")
-    session.run("release-helper", "git-check-clean")
+    # session.run("release-helper", "git-check-clean")
     session.run("release-helper", "git-check-tag", release_version, "--does-not-exist")
     session.run("release-helper", "git-check-remote", "origin", *allowed_upstreams)
 
