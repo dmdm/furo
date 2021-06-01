@@ -70,5 +70,5 @@ html_title = "Furo"
 
 html_static_path = ["_static"]
 
-pygments_style = "gruvbox-light"
-pygments_dark_style = "gruvbox-dark"
+pygments_style = "dm-gruvbox-light"
+pygments_dark_style = "dm-gruvbox-dark"

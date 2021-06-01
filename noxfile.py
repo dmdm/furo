@@ -50,7 +50,7 @@ def docs_live(session):
             "--watch=src/",
             f"--pre-build={build_command}",
             r"--re-ignore=src/.*/theme/furo/static/.*\.(css|js)",  # ignore the generated files
-            "--open-browser",
+            #"--open-browser",
             # for sphinx
             "-b=dirhtml",
             "-a",
